@@ -22,7 +22,7 @@ public class StreamManager : MonoBehaviour {
 	{
 		ThalmicMyo thalmicMyo = myo.GetComponent<ThalmicMyo> ();
 
-		if (thalmicMyo.pose == Pose.Fist) {
+		if (thalmicMyo.pose == Pose.Fist && GetComponent<ParticleSystem>().emissionRate > 0) {
 			//thalmicMyo.Vibrate (VibrationType.Medium);
 			GetComponent<ParticleSystem>().emissionRate = Mathf.Lerp(GetComponent<ParticleSystem>().emissionRate, 0, Time.deltaTime*5);
 			//ExtendUnlockAndNotifyUserAction (thalmicMyo);
