@@ -57,7 +57,7 @@ public class SceneManager : MonoBehaviour {
 
         if(!scene_changed)
         {
-            //return;
+            return;
         }
 
         StartCoroutine(playBlinkAnimation());
