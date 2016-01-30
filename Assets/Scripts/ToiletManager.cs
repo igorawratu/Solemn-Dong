@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class ToiletManager : MonoBehaviour {
@@ -6,19 +7,24 @@ public class ToiletManager : MonoBehaviour {
 	bool hittingWater = false;
 	AudioSource audioSource;
 	public Light light;
-	public Material SuccessMaterial;
-	public Material StandardMaterial;
 
 	public float DickFactor = 0;
+	float maxDickFactor = 2000f;
+	Slider dickSlider;
 
 	// Use this for initialization
 	void Start () {
+		dickSlider = GameObject.Find("Dick-o-meter").GetComponent<Slider>();
 		audioSource = GetComponent<AudioSource>();
 	}
-	
+
 	// Update is called once per frame
 	void Update(){
-
+		dickSlider.value = (DickFactor/maxDickFactor);
+		if(DickFactor/maxDickFactor>0.99f){
+			GameObject.Find("AnchorCubeTop").SetActive(false);
+			Destroy(this);
+		}
 	}
 
 	void OnParticleCollision(GameObject other) {
