@@ -8,23 +8,19 @@ public class ToiletManager : MonoBehaviour {
 	AudioSource audioSource;
 	public Light light;
 
-	public float DickFactor = 0;
-	float maxDickFactor = 2000f;
-	Slider dickSlider;
+	DrunkManager drunkManager;
+
 
 	// Use this for initialization
 	void Start () {
-		dickSlider = GameObject.Find("Dick-o-meter").GetComponent<Slider>();
+		
 		audioSource = GetComponent<AudioSource>();
+		drunkManager = GameObject.FindObjectOfType<DrunkManager>();
 	}
 
 	// Update is called once per frame
 	void Update(){
-		dickSlider.value = (DickFactor/maxDickFactor);
-		if(DickFactor/maxDickFactor>0.99f){
-			GameObject.Find("AnchorCubeTop").SetActive(false);
-			Destroy(this);
-		}
+		
 	}
 
 	void OnParticleCollision(GameObject other) {
@@ -36,7 +32,7 @@ public class ToiletManager : MonoBehaviour {
 	public void Missing(){
 		audioSource.mute = true;
 		light.intensity = Mathf.Lerp(light.intensity, 0, Time.deltaTime*4);
-		DickFactor++;
+		drunkManager.Missing();
 	}
 
 }
