@@ -48,6 +48,7 @@ public class StreamManager : MonoBehaviour {
 				//GetComponent<Renderer>().material = waveOutMaterial;
 				ExtendUnlockAndNotifyUserAction (thalmicMyo);
 			} else if (thalmicMyo.pose == Pose.DoubleTap) {
+				GetComponent<ParticleSystem>().Play();
 //				Debug.Log("Shake");
 //				ExtendUnlockAndNotifyUserAction (thalmicMyo);
 			}
