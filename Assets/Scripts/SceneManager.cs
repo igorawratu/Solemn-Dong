@@ -61,6 +61,22 @@ public class SceneManager : MonoBehaviour {
         }
 
         StartCoroutine(playBlinkAnimation());
+	}
+
+    IEnumerator playBlinkAnimation()
+    {
+        Debug.Log("stuff");
+        Animator eyelid_animator = Eyelid.GetComponent<Animator>();
+
+        eyelid_animator.SetBool("Blink", true);
+        yield return new WaitForSeconds(blink_time);
+        eyelid_animator.SetBool("Blink", false);
+
+        System.Random rng = new System.Random();
+
+        int num_cubicals = cubicals.Length;
+        int num_toilets = toilets.Length;
+        int num_effects = effects.Length;
 
         if (num_cubicals > 0)
         {
@@ -73,7 +89,8 @@ public class SceneManager : MonoBehaviour {
         if (num_toilets > 0)
         {
             int selected_toilet = rng.Next(0, num_toilets);
-            
+            Debug.Log(selected_toilet);
+
             Destroy(active_toilet);
             active_toilet = Instantiate(toilets[selected_toilet]);
         }
@@ -85,15 +102,5 @@ public class SceneManager : MonoBehaviour {
             Destroy(active_effect);
             active_effect = Instantiate(effects[selected_effect]);
         }
-	}
-
-    IEnumerator playBlinkAnimation()
-    {
-        Debug.Log("stuff");
-        Animator eyelid_animator = Eyelid.GetComponent<Animator>();
-
-        eyelid_animator.SetBool("Blink", true);
-        yield return new WaitForSeconds(blink_time);
-        eyelid_animator.SetBool("Blink", false);
     }
 }

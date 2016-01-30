@@ -14,13 +14,13 @@ public class ToiletManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		dickSlider = GameObject.Find("Dick-o-meter").GetComponent<Slider>();
+		//dickSlider = GameObject.Find("Dick-o-meter").GetComponent<Slider>();
 		audioSource = GetComponent<AudioSource>();
 	}
 
 	// Update is called once per frame
 	void Update(){
-		dickSlider.value = (DickFactor/maxDickFactor);
+		//dickSlider.value = (DickFactor/maxDickFactor);
 		if(DickFactor/maxDickFactor>0.99f){
 			GameObject.Find("AnchorCubeTop").SetActive(false);
 			Destroy(this);
