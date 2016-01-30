@@ -17,9 +17,13 @@ public class StreamManager : MonoBehaviour {
 	public Slider BladderSlider;
 	private bool rupturedBladder = false;
 	public Color BloodPiss;
+	public GameObject BladderImage;
+
+	public bool Dead = false;
 
 	void Start(){
 		_streamPower = GetComponent<ParticleSystem>().emissionRate;
+		BladderImage = GameObject.Find("BladderImage");
 	}
 
 	// Update is called once per frame.
@@ -44,9 +48,12 @@ public class StreamManager : MonoBehaviour {
 			//ExtendUnlockAndNotifyUserAction (thalmicMyo);
 		}
 
-		if(BladderPower<1){
+		if(BladderPower<1 && !rupturedBladder){
 			rupturedBladder = true;
-			BladderSlider.enabled = false;
+			BladderSlider.gameObject.SetActive(false);
+			BladderImage.GetComponent<Image>().color = Color.red;
+			BladderImage.transform.localScale *= 1.3f;	
+			BladderImage.GetComponent<RectTransform>().localPosition = new Vector3(BladderImage.GetComponent<RectTransform>().localPosition.x+1f,0,0);
 			GetComponent<ParticleSystem>().startColor = BloodPiss;
 		}
 
@@ -63,7 +70,9 @@ public class StreamManager : MonoBehaviour {
 			} else if (thalmicMyo.pose == Pose.WaveOut) {
 				//GetComponent<Renderer>().material = waveOutMaterial;
 				ExtendUnlockAndNotifyUserAction (thalmicMyo);
-			} else if (thalmicMyo.pose == Pose.DoubleTap) {
+			}else if (thalmicMyo.pose == Pose.DoubleTap && Dead) {
+				Application.LoadLevel(Application.loadedLevel);
+			}else if (thalmicMyo.pose == Pose.DoubleTap) {
 				GetComponent<ParticleSystem>().Play();
 //				Debug.Log("Shake");
 //				ExtendUnlockAndNotifyUserAction (thalmicMyo);

@@ -23,6 +23,7 @@ public class ToiletManager : MonoBehaviour {
 		dickSlider.value = (DickFactor/maxDickFactor);
 		if(DickFactor/maxDickFactor>0.99f){
 			GameObject.Find("AnchorCubeTop").SetActive(false);
+			GameObject.FindObjectOfType<StreamManager>().Dead = true;
 			Destroy(this);
 		}
 	}
