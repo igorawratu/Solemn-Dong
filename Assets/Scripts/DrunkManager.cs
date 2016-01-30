@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class DrunkManager : MonoBehaviour {
@@ -12,24 +13,15 @@ public class DrunkManager : MonoBehaviour {
 
 	public Transform Toilet;
 
+	public float DickFactor = 0;
+	float maxDickFactor = 2000f;
+	Slider dickSlider;
+
 	void Start(){
 		StartCoroutine("ApplyForce");
+		dickSlider = GameObject.Find("Dick-o-meter").GetComponent<Slider>();
 	}
 
-	void FixedUpdate ()
-	{
-
-//		if (waiting == false)
-//		{
-//			StartCoroutine("LerpX");
-//		}
-//		else
-//		{
-//			transform.position = Vector3.Lerp (transform.position, randomPosition, Time.deltaTime*Speed);
-//		}
-
-
-	}
 
 	void Update(){
 		
@@ -56,6 +48,17 @@ public class DrunkManager : MonoBehaviour {
 			Debug.Log("Rectifying");
 		}
 
+
+		dickSlider.value = (DickFactor/maxDickFactor);
+		if(DickFactor/maxDickFactor>0.99f){
+			GameObject.Find("AnchorCubeTop").SetActive(false);
+			GameObject.FindObjectOfType<StreamManager>().Dead = true;
+			Destroy(this);
+		}
+	}
+
+	public void Missing(){
+		DickFactor++;
 	}
 
 	private Vector3 theForce = Vector3.zero;

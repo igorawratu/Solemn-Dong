@@ -65,7 +65,7 @@ public class SceneManager : MonoBehaviour {
 
     IEnumerator playBlinkAnimation()
     {
-        Debug.Log("stuff");
+        Debug.Log("Blinking");
         Animator eyelid_animator = Eyelid.GetComponent<Animator>();
 
         eyelid_animator.SetBool("Blink", true);
