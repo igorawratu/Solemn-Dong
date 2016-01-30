@@ -9,6 +9,8 @@ public class ToiletManager : MonoBehaviour {
 	public Material SuccessMaterial;
 	public Material StandardMaterial;
 
+	public float DickFactor = 0;
+
 	// Use this for initialization
 	void Start () {
 		audioSource = GetComponent<AudioSource>();
@@ -28,6 +30,7 @@ public class ToiletManager : MonoBehaviour {
 	public void Missing(){
 		audioSource.mute = true;
 		light.intensity = Mathf.Lerp(light.intensity, 0, Time.deltaTime*4);
+		DickFactor++;
 	}
 
 }
