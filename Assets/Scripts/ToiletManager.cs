@@ -7,22 +7,21 @@ public class ToiletManager : MonoBehaviour {
 	bool hittingWater = false;
 	AudioSource audioSource;
 	public Light light;
-	public Material SuccessMaterial;
-	public Material StandardMaterial;
 
 	public float DickFactor = 0;
-	public float MaxDickFactor = 10000f;
-	public Slider DickSlider;
+	float maxDickFactor = 2000f;
+	Slider dickSlider;
 
 	// Use this for initialization
 	void Start () {
+		dickSlider = GameObject.Find("Dick-o-meter").GetComponent<Slider>();
 		audioSource = GetComponent<AudioSource>();
 	}
 
 	// Update is called once per frame
 	void Update(){
-		DickSlider.value = (DickFactor/MaxDickFactor);
-		if(DickFactor/MaxDickFactor>0.99f){
+		dickSlider.value = (DickFactor/maxDickFactor);
+		if(DickFactor/maxDickFactor>0.99f){
 			GameObject.Find("AnchorCubeTop").SetActive(false);
 			Destroy(this);
 		}

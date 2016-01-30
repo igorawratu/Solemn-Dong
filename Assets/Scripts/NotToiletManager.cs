@@ -8,7 +8,7 @@ public class NotToiletManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		toiletManager = GameObject.Find("ToiletInside_Toilet").GetComponent<ToiletManager>();
+		toiletManager = GameObject.FindObjectOfType<ToiletManager>().GetComponent<ToiletManager>();
 		if(IsToiletSeat)
 			StartCoroutine("FlipSeat");
 	}
@@ -24,6 +24,6 @@ public class NotToiletManager : MonoBehaviour {
 	// Update is called once per frame
 	void OnParticleCollision(GameObject other) {
 		toiletManager.Missing();
-		Debug.Log(other.transform.position);
+		//Debug.Log(other.transform.position);
 	}
 }
