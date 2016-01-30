@@ -10,6 +10,8 @@ public class DrunkManager : MonoBehaviour {
 	Vector3 randomPosition;
 	float moveDelay = 1;
 
+	public Transform Toilet;
+
 	void Start(){
 		StartCoroutine("ApplyForce");
 	}
@@ -30,7 +32,30 @@ public class DrunkManager : MonoBehaviour {
 	}
 
 	void Update(){
-		GetComponent<Rigidbody>().AddForce(theForce);
+		
+		var rid=GetComponent<Rigidbody>();
+
+		Vector3 viewPos = Camera.main.WorldToViewportPoint(Toilet.position);
+
+		if ((viewPos.x < 0.6F && viewPos.x > 0.4f) && (rid.velocity.x < Speed && rid.velocity.z < Speed)){
+			
+			rid.AddForce(theForce);	
+			Debug.Log("In view");
+		}
+		else{
+			var targetDir = Toilet.transform.position - transform.position;
+			var forward = transform.forward;
+			var localTarget = transform.InverseTransformPoint(Toilet.transform.position);
+
+			var angle = Mathf.Atan2(localTarget.x, localTarget.z) * Mathf.Rad2Deg;
+
+			var eulerAngleVelocity = new Vector3 (0, angle, 0);
+			var deltaRotation = Quaternion.Euler(eulerAngleVelocity * Time.deltaTime );
+			rid.MoveRotation(rid.rotation * deltaRotation);
+
+			Debug.Log("Rectifying");
+		}
+
 	}
 
 	private Vector3 theForce = Vector3.zero;
