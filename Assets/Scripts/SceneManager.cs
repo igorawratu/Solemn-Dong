@@ -65,7 +65,6 @@ public class SceneManager : MonoBehaviour {
 
     IEnumerator playBlinkAnimation()
     {
-        Debug.Log("stuff");
         Animator eyelid_animator = Eyelid.GetComponent<Animator>();
 
         eyelid_animator.SetBool("Blink", true);
@@ -89,7 +88,6 @@ public class SceneManager : MonoBehaviour {
         if (num_toilets > 0)
         {
             int selected_toilet = rng.Next(0, num_toilets);
-            Debug.Log(selected_toilet);
 
             Destroy(active_toilet);
             active_toilet = Instantiate(toilets[selected_toilet]);
