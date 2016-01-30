@@ -4,11 +4,13 @@ using System.Collections;
 public class NotToiletManager : MonoBehaviour {
 
 	ToiletManager toiletManager;
+	public bool IsToiletSeat = false;
 
 	// Use this for initialization
 	void Start () {
 		toiletManager = GameObject.Find("ToiletInside_Toilet").GetComponent<ToiletManager>();
-		StartCoroutine("FlipSeat");
+		if(IsToiletSeat)
+			StartCoroutine("FlipSeat");
 	}
 
 	IEnumerator FlipSeat(){
@@ -22,6 +24,6 @@ public class NotToiletManager : MonoBehaviour {
 	// Update is called once per frame
 	void OnParticleCollision(GameObject other) {
 		toiletManager.Missing();
-
+		Debug.Log(other.transform.position);
 	}
 }
