@@ -1,0 +1,123 @@
+fileFormatVersion: 2
+guid: 42a15b2a024774275b0cdb1dc9984650
+timeCreated: 1454241716
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: textureBakeSet1_Bin_Bin_Lift
+    100004: textureBakeSet1_Bin_Lift_BinLid
+    100006: textureBakeSet1_Lift_Lift_LiftFloor
+    100008: textureBakeSet1_Lift_LiftCage_Lift
+    100010: textureBakeSet1_Lift_OuterLift_Cable01_Cables
+    100012: textureBakeSet1_Lift_OuterLift_Cables_Cable02
+    100014: textureBakeSet1_Lift_OuterLift_Cables_Cable03
+    100016: textureBakeSet1_Lift_OuterLift_Pillars01
+    100018: textureBakeSet1_Lift_OuterLift_Pillars02
+    100020: textureBakeSet1_Lift_Walls_OuterLift
+    400000: //RootNode
+    400002: textureBakeSet1_Bin_Bin_Lift
+    400004: textureBakeSet1_Bin_Lift_BinLid
+    400006: textureBakeSet1_Lift_Lift_LiftFloor
+    400008: textureBakeSet1_Lift_LiftCage_Lift
+    400010: textureBakeSet1_Lift_OuterLift_Cable01_Cables
+    400012: textureBakeSet1_Lift_OuterLift_Cables_Cable02
+    400014: textureBakeSet1_Lift_OuterLift_Cables_Cable03
+    400016: textureBakeSet1_Lift_OuterLift_Pillars01
+    400018: textureBakeSet1_Lift_OuterLift_Pillars02
+    400020: textureBakeSet1_Lift_Walls_OuterLift
+    2300000: textureBakeSet1_Bin_Bin_Lift
+    2300002: textureBakeSet1_Bin_Lift_BinLid
+    2300004: textureBakeSet1_Lift_Lift_LiftFloor
+    2300006: textureBakeSet1_Lift_LiftCage_Lift
+    2300008: textureBakeSet1_Lift_OuterLift_Cable01_Cables
+    2300010: textureBakeSet1_Lift_OuterLift_Cables_Cable02
+    2300012: textureBakeSet1_Lift_OuterLift_Cables_Cable03
+    2300014: textureBakeSet1_Lift_OuterLift_Pillars01
+    2300016: textureBakeSet1_Lift_OuterLift_Pillars02
+    2300018: textureBakeSet1_Lift_Walls_OuterLift
+    3300000: textureBakeSet1_Bin_Bin_Lift
+    3300002: textureBakeSet1_Bin_Lift_BinLid
+    3300004: textureBakeSet1_Lift_Lift_LiftFloor
+    3300006: textureBakeSet1_Lift_LiftCage_Lift
+    3300008: textureBakeSet1_Lift_OuterLift_Cable01_Cables
+    3300010: textureBakeSet1_Lift_OuterLift_Cables_Cable02
+    3300012: textureBakeSet1_Lift_OuterLift_Cables_Cable03
+    3300014: textureBakeSet1_Lift_OuterLift_Pillars01
+    3300016: textureBakeSet1_Lift_OuterLift_Pillars02
+    3300018: textureBakeSet1_Lift_Walls_OuterLift
+    4300000: textureBakeSet1_Bin_Bin_Lift
+    4300002: textureBakeSet1_Bin_Lift_BinLid
+    4300004: textureBakeSet1_Lift_Lift_LiftFloor
+    4300006: textureBakeSet1_Lift_LiftCage_Lift
+    4300008: textureBakeSet1_Lift_OuterLift_Cable01_Cables
+    4300010: textureBakeSet1_Lift_OuterLift_Cables_Cable02
+    4300012: textureBakeSet1_Lift_OuterLift_Cables_Cable03
+    4300014: textureBakeSet1_Lift_OuterLift_Pillars01
+    4300016: textureBakeSet1_Lift_OuterLift_Pillars02
+    4300018: textureBakeSet1_Lift_Walls_OuterLift
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

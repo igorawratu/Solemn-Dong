@@ -14,9 +14,10 @@ public class NotToiletManager : MonoBehaviour {
 	}
 
 	IEnumerator FlipSeat(){
+		Debug.Log("Holla");
 		yield return new WaitForSeconds(Random.Range(10, 40));
 		GetComponent<Animator>().SetBool("LidOpen", false);
-		yield return new WaitForSeconds(0.5f);
+		yield return new WaitForSeconds(1f);
 		GetComponent<Animator>().SetBool("LidOpen", true);
 		StartCoroutine("FlipSeat");
 	}
