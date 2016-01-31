@@ -3,9 +3,7 @@ using System;
 using System.Collections;
 
 public class SceneManager : MonoBehaviour {
-    public GameObject [] cubicals;
-    public GameObject [] toilets;
-    public GameObject [] effects;
+    public GameObject [] levels;
 
     public int change_scene_lower;
     public int change_scene_upper;
@@ -17,9 +15,8 @@ public class SceneManager : MonoBehaviour {
     private float time_in_scene = 0;
     private int scene_change_time = 0;
 
-    private GameObject active_cubical;
-    private GameObject active_toilet;
-    private GameObject active_effect;
+    private GameObject active_level;
+    private int active_level_idx;
 
 	// Use this for initialization
 	void Start () {
@@ -31,9 +28,8 @@ public class SceneManager : MonoBehaviour {
         System.Random rng = new System.Random();
         scene_change_time = rng.Next(change_scene_lower, change_scene_upper + 1);
 
-        active_cubical = cubicals.Length > 0 ? Instantiate(cubicals[0]) : null;
-        active_toilet = toilets.Length > 0 ? Instantiate(toilets[0]) : null;
-        active_effect = effects.Length > 0 ? Instantiate(effects[0]) : null;
+        active_level = levels.Length > 0 ? Instantiate(levels[0]) : null;
+        active_level_idx = 0;
 	}
 	
 	// Update is called once per frame
@@ -49,11 +45,9 @@ public class SceneManager : MonoBehaviour {
         time_in_scene = 0;
         scene_change_time = rng.Next(change_scene_lower, change_scene_upper + 1);
 
-        int num_cubicals = cubicals.Length;
-        int num_toilets = toilets.Length;
-        int num_effects = effects.Length;
+        int num_levels = levels.Length;
 
-        bool scene_changed = num_cubicals > 1 && num_toilets > 1 && num_effects > 1;
+        bool scene_changed = num_levels > 1;
 
         if(!scene_changed)
         {
@@ -73,32 +67,16 @@ public class SceneManager : MonoBehaviour {
 
         System.Random rng = new System.Random();
 
-        int num_cubicals = cubicals.Length;
-        int num_toilets = toilets.Length;
-        int num_effects = effects.Length;
+        int num_levels = levels.Length;
 
-        if (num_cubicals > 0)
+        int selected = active_level_idx;
+        while (selected == active_level_idx)
         {
-            int selected_cubical = rng.Next(0, num_cubicals);
-
-            Destroy(active_cubical);
-            active_cubical = Instantiate(cubicals[selected_cubical]);
+            selected = rng.Next(0, num_levels + 1);
         }
 
-        if (num_toilets > 0)
-        {
-            int selected_toilet = rng.Next(0, num_toilets);
-
-            Destroy(active_toilet);
-            active_toilet = Instantiate(toilets[selected_toilet]);
-        }
-
-        if (num_effects > 0)
-        {
-            int selected_effect = rng.Next(0, num_effects);
-
-            Destroy(active_effect);
-            active_effect = Instantiate(effects[selected_effect]);
-        }
+        Destroy(active_level);
+        active_level = Instantiate(levels[selected]);
+        active_level_idx = selected;
     }
 }
