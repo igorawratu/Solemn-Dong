@@ -81,6 +81,9 @@ public class DrunkManager : MonoBehaviour {
 		//Debug.Log ("waited");
 	}
 
+	public void Holed(){
+		DickFactor = DickFactor/2;
+	}
 
 }
 

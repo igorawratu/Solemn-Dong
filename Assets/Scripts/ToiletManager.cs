@@ -40,5 +40,4 @@ public class ToiletManager : MonoBehaviour {
 		light.intensity = Mathf.Lerp(light.intensity, 0, Time.deltaTime*4);
 		drunkManager.Missing();
 	}
-
 }
