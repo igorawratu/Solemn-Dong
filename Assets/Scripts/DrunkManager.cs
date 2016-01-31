@@ -14,17 +14,18 @@ public class DrunkManager : MonoBehaviour {
 	public Transform Toilet;
 
 	public float DickFactor = 0;
-	float maxDickFactor = 2000f;
+	float maxDickFactor = 3000f;
 	Slider dickSlider;
 
 	void Start(){
 		StartCoroutine("ApplyForce");
+
 		dickSlider = GameObject.Find("Dick-o-meter").GetComponent<Slider>();
 	}
 
 
 	void Update(){
-		
+		Toilet = GameObject.FindObjectOfType<ToiletManager>().transform;
 		var rid=GetComponent<Rigidbody>();
 
 		Vector3 viewPos = Camera.main.WorldToViewportPoint(Toilet.position);
