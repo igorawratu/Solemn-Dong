@@ -18,6 +18,8 @@ public class SceneManager : MonoBehaviour {
     private GameObject active_level;
     private int active_level_idx;
 
+    Animator eyelid_animator;
+
 	// Use this for initialization
 	void Start () {
         if (change_scene_lower >= change_scene_upper)
@@ -30,6 +32,8 @@ public class SceneManager : MonoBehaviour {
 
         active_level = levels.Length > 0 ? Instantiate(levels[0]) : null;
         active_level_idx = 0;
+
+        eyelid_animator = Eyelid.GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -59,8 +63,6 @@ public class SceneManager : MonoBehaviour {
 
     IEnumerator playBlinkAnimation()
     {
-        Animator eyelid_animator = Eyelid.GetComponent<Animator>();
-
         eyelid_animator.SetBool("Blink", true);
         yield return new WaitForSeconds(blink_time);
         eyelid_animator.SetBool("Blink", false);
