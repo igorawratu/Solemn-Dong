@@ -18,7 +18,9 @@ public class SceneManager : MonoBehaviour {
     private GameObject active_level;
     private int active_level_idx;
 
-    Animator eyelid_animator;
+    private Animator eyelid_animator;
+
+    private int[] priorities;
 
 	// Use this for initialization
 	void Start () {
@@ -34,10 +36,18 @@ public class SceneManager : MonoBehaviour {
         active_level_idx = 0;
 
         eyelid_animator = Eyelid.GetComponent<Animator>();
+        priorities = new int[levels.Length];
+        priorities[0] = 0;
+
+        for (int k = 1; k < priorities.Length; ++k)
+        {
+            priorities[k] = 1;
+        }
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
         time_in_scene += Time.deltaTime;
         if (time_in_scene < (float)scene_change_time)
         {
@@ -64,19 +74,45 @@ public class SceneManager : MonoBehaviour {
     IEnumerator playBlinkAnimation()
     {
         eyelid_animator.SetBool("Blink", true);
+        Globals.fade_out = true;
         yield return new WaitForSeconds(blink_time);
         eyelid_animator.SetBool("Blink", false);
+        Globals.fade_out = false;
 
         System.Random rng = new System.Random();
 
-        int num_levels = levels.Length;
-
-        int selected = active_level_idx;
-        while (selected == active_level_idx)
+        int max_priority = 0;
+        for (int k = 0; k < priorities.Length; ++k)
         {
-            selected = rng.Next(0, num_levels);
+            max_priority += priorities[k];
+        }
+        
+        int selected = 0;
+        int random_priority = rng.Next(0, max_priority);
+
+        int curr_acc = 0;
+        for (int k = 0; k < priorities.Length; ++k)
+        {
+            if (random_priority >= curr_acc && random_priority < curr_acc + priorities[k])
+            {
+                selected = k;
+                break;
+            }
+            curr_acc += priorities[k];
         }
 
+        for (int k = 0; k < priorities.Length; ++k)
+        {
+            if (k == selected)
+            {
+                priorities[k] = 0;
+            }
+            else
+            {
+                priorities[k] = priorities[k] == 0 ? 1 : priorities[k] * 2;
+            }
+        }
+        
         Destroy(active_level);
         active_level = Instantiate(levels[selected]);
         active_level_idx = selected;
