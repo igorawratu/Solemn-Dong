@@ -33,7 +33,7 @@ public class SceneManager : MonoBehaviour {
         active_level = levels.Length > 0 ? Instantiate(levels[0]) : null;
         active_level_idx = 0;
 
-        eyelid_animator = Eyelid.GetComponent<Animator>()
+        eyelid_animator = Eyelid.GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
