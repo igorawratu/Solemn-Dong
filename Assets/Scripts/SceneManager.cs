@@ -72,7 +72,7 @@ public class SceneManager : MonoBehaviour {
         int selected = active_level_idx;
         while (selected == active_level_idx)
         {
-            selected = rng.Next(0, num_levels + 1);
+            selected = rng.Next(0, num_levels);
         }
 
         Destroy(active_level);

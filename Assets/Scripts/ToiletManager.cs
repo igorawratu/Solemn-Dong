@@ -10,6 +10,8 @@ public class ToiletManager : MonoBehaviour {
 
 	DrunkManager drunkManager;
 
+	float awesomeNumber = 0;
+
 
 	// Use this for initialization
 	void Start () {
@@ -20,17 +22,21 @@ public class ToiletManager : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update(){
-		
+
+		if(awesomeNumber > 5){
+			audioSource.mute = true;
+		}
 	}
 
 	void OnParticleCollision(GameObject other) {
+		awesomeNumber = 0;
 		audioSource.mute = false;
 		light.intensity = Mathf.Lerp(light.intensity, 4f, Time.deltaTime*4);
 		
 	}
 
 	public void Missing(){
-		audioSource.mute = true;
+		awesomeNumber ++;
 		light.intensity = Mathf.Lerp(light.intensity, 0, Time.deltaTime*4);
 		drunkManager.Missing();
 	}
