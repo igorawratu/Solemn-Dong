@@ -1,0 +1,168 @@
+fileFormatVersion: 2
+guid: 7667815d7f3c34a68b78fecc32226d60
+timeCreated: 1454225022
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: initialShadingGroup_textureBakeSet1_Porta_Potty_Basin_Basin_Basin
+    100002: initialShadingGroup_textureBakeSet1_Porta_Potty_Seat_Toilet_Seat
+    100004: //RootNode
+    100006: textureBakeSet1_Porta_Potty_BackWall_polySurface13
+    100008: textureBakeSet1_Porta_Potty_BackWall_polySurface17
+    100010: textureBakeSet1_Porta_Potty_Base_Basin
+    100012: textureBakeSet1_Porta_Potty_Basin_Tap
+    100014: textureBakeSet1_Porta_Potty_Floor
+    100016: textureBakeSet1_Porta_Potty_LeftWall_polySurface21
+    100018: textureBakeSet1_Porta_Potty_LeftWall_polySurface22
+    100020: textureBakeSet1_Porta_Potty_Pipe
+    100022: textureBakeSet1_Porta_Potty_polySurface11_BackWall
+    100024: textureBakeSet1_Porta_Potty_polySurface20_LeftWall
+    100026: textureBakeSet1_Porta_Potty_polySurface23_RightWall
+    100028: textureBakeSet1_Porta_Potty_RightWall_polySurface24
+    100030: textureBakeSet1_Porta_Potty_RightWall_polySurface25
+    100032: textureBakeSet1_Porta_Potty_Roof_Roof
+    100034: textureBakeSet1_Porta_Potty_Roof_RoofSupport
+    100036: textureBakeSet1_Porta_Potty_Toilet_Seat_Base
+    100038: textureBakeSet1_SeatFrame_Porta_Potty
+    400000: initialShadingGroup_textureBakeSet1_Porta_Potty_Basin_Basin_Basin
+    400002: initialShadingGroup_textureBakeSet1_Porta_Potty_Seat_Toilet_Seat
+    400004: //RootNode
+    400006: textureBakeSet1_Porta_Potty_BackWall_polySurface13
+    400008: textureBakeSet1_Porta_Potty_BackWall_polySurface17
+    400010: textureBakeSet1_Porta_Potty_Base_Basin
+    400012: textureBakeSet1_Porta_Potty_Basin_Tap
+    400014: textureBakeSet1_Porta_Potty_Floor
+    400016: textureBakeSet1_Porta_Potty_LeftWall_polySurface21
+    400018: textureBakeSet1_Porta_Potty_LeftWall_polySurface22
+    400020: textureBakeSet1_Porta_Potty_Pipe
+    400022: textureBakeSet1_Porta_Potty_polySurface11_BackWall
+    400024: textureBakeSet1_Porta_Potty_polySurface20_LeftWall
+    400026: textureBakeSet1_Porta_Potty_polySurface23_RightWall
+    400028: textureBakeSet1_Porta_Potty_RightWall_polySurface24
+    400030: textureBakeSet1_Porta_Potty_RightWall_polySurface25
+    400032: textureBakeSet1_Porta_Potty_Roof_Roof
+    400034: textureBakeSet1_Porta_Potty_Roof_RoofSupport
+    400036: textureBakeSet1_Porta_Potty_Toilet_Seat_Base
+    400038: textureBakeSet1_SeatFrame_Porta_Potty
+    2300000: initialShadingGroup_textureBakeSet1_Porta_Potty_Basin_Basin_Basin
+    2300002: initialShadingGroup_textureBakeSet1_Porta_Potty_Seat_Toilet_Seat
+    2300004: textureBakeSet1_Porta_Potty_BackWall_polySurface13
+    2300006: textureBakeSet1_Porta_Potty_BackWall_polySurface17
+    2300008: textureBakeSet1_Porta_Potty_Base_Basin
+    2300010: textureBakeSet1_Porta_Potty_Basin_Tap
+    2300012: textureBakeSet1_Porta_Potty_Floor
+    2300014: textureBakeSet1_Porta_Potty_LeftWall_polySurface21
+    2300016: textureBakeSet1_Porta_Potty_LeftWall_polySurface22
+    2300018: textureBakeSet1_Porta_Potty_Pipe
+    2300020: textureBakeSet1_Porta_Potty_polySurface11_BackWall
+    2300022: textureBakeSet1_Porta_Potty_polySurface20_LeftWall
+    2300024: textureBakeSet1_Porta_Potty_polySurface23_RightWall
+    2300026: textureBakeSet1_Porta_Potty_RightWall_polySurface24
+    2300028: textureBakeSet1_Porta_Potty_RightWall_polySurface25
+    2300030: textureBakeSet1_Porta_Potty_Roof_Roof
+    2300032: textureBakeSet1_Porta_Potty_Roof_RoofSupport
+    2300034: textureBakeSet1_Porta_Potty_Toilet_Seat_Base
+    2300036: textureBakeSet1_SeatFrame_Porta_Potty
+    3300000: initialShadingGroup_textureBakeSet1_Porta_Potty_Basin_Basin_Basin
+    3300002: initialShadingGroup_textureBakeSet1_Porta_Potty_Seat_Toilet_Seat
+    3300004: textureBakeSet1_Porta_Potty_BackWall_polySurface13
+    3300006: textureBakeSet1_Porta_Potty_BackWall_polySurface17
+    3300008: textureBakeSet1_Porta_Potty_Base_Basin
+    3300010: textureBakeSet1_Porta_Potty_Basin_Tap
+    3300012: textureBakeSet1_Porta_Potty_Floor
+    3300014: textureBakeSet1_Porta_Potty_LeftWall_polySurface21
+    3300016: textureBakeSet1_Porta_Potty_LeftWall_polySurface22
+    3300018: textureBakeSet1_Porta_Potty_Pipe
+    3300020: textureBakeSet1_Porta_Potty_polySurface11_BackWall
+    3300022: textureBakeSet1_Porta_Potty_polySurface20_LeftWall
+    3300024: textureBakeSet1_Porta_Potty_polySurface23_RightWall
+    3300026: textureBakeSet1_Porta_Potty_RightWall_polySurface24
+    3300028: textureBakeSet1_Porta_Potty_RightWall_polySurface25
+    3300030: textureBakeSet1_Porta_Potty_Roof_Roof
+    3300032: textureBakeSet1_Porta_Potty_Roof_RoofSupport
+    3300034: textureBakeSet1_Porta_Potty_Toilet_Seat_Base
+    3300036: textureBakeSet1_SeatFrame_Porta_Potty
+    4300000: initialShadingGroup_textureBakeSet1_Porta_Potty_Basin_Basin_Basin
+    4300002: initialShadingGroup_textureBakeSet1_Porta_Potty_Seat_Toilet_Seat
+    4300004: textureBakeSet1_Porta_Potty_BackWall_polySurface13
+    4300006: textureBakeSet1_Porta_Potty_BackWall_polySurface17
+    4300008: textureBakeSet1_Porta_Potty_Base_Basin
+    4300010: textureBakeSet1_Porta_Potty_Basin_Tap
+    4300012: textureBakeSet1_Porta_Potty_Floor
+    4300014: textureBakeSet1_Porta_Potty_LeftWall_polySurface21
+    4300016: textureBakeSet1_Porta_Potty_LeftWall_polySurface22
+    4300018: textureBakeSet1_Porta_Potty_Pipe
+    4300020: textureBakeSet1_Porta_Potty_polySurface11_BackWall
+    4300022: textureBakeSet1_Porta_Potty_polySurface20_LeftWall
+    4300024: textureBakeSet1_Porta_Potty_polySurface23_RightWall
+    4300026: textureBakeSet1_Porta_Potty_RightWall_polySurface24
+    4300028: textureBakeSet1_Porta_Potty_RightWall_polySurface25
+    4300030: textureBakeSet1_Porta_Potty_Roof_Roof
+    4300032: textureBakeSet1_Porta_Potty_Roof_RoofSupport
+    4300034: textureBakeSet1_Porta_Potty_Toilet_Seat_Base
+    4300036: textureBakeSet1_SeatFrame_Porta_Potty
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

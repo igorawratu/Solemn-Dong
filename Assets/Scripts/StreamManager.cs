@@ -19,11 +19,14 @@ public class StreamManager : MonoBehaviour {
 	public Color BloodPiss;
 	public GameObject BladderImage;
 
+
+	GameObject TapFingers;
 	public bool Dead = false;
 
 	void Start(){
 		_streamPower = GetComponent<ParticleSystem>().emissionRate;
 		BladderImage = GameObject.Find("BladderImage");
+		TapFingers = GameObject.Find("TapFingers");
 	}
 
 	// Update is called once per frame.
@@ -74,9 +77,15 @@ public class StreamManager : MonoBehaviour {
 				Application.LoadLevel(Application.loadedLevel);
 			}else if (thalmicMyo.pose == Pose.DoubleTap) {
 				GetComponent<ParticleSystem>().Play();
+
+				TapFingers.SetActive(false);
 //				Debug.Log("Shake");
 //				ExtendUnlockAndNotifyUserAction (thalmicMyo);
 			}
+		}
+
+		if(Dead){
+			TapFingers.SetActive(true);
 		}
 	}
 
